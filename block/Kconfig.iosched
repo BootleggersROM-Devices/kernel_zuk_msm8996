@@ -36,6 +36,15 @@ config IOSCHED_MAPLE
 	tristate "Maple I/O scheduler"
 	default y
 
+
+config IOSCHED_ZEN
+	tristate "Zen I/O scheduler"
+	default y
+	---help---
+	FCFS, dispatches are back-inserted, deadlines ensure fairness.
+        Should work best with devices where there is no travel delay.
+
+
 config IOSCHED_CFQ
 	tristate "CFQ I/O scheduler"
 	default y
@@ -139,6 +148,7 @@ config DEFAULT_IOSCHED
 	default "fiops" if DEFAULT_FIOPS
 	default "sio" if DEFAULT_SIO
 	default "maple" if DEFAULT_MAPLE
+	default "zen" if DEFAULT_ZEN
 
 endmenu
 
