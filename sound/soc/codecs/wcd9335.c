@@ -14070,7 +14070,6 @@ static int tasha_codec_probe(struct snd_soc_codec *codec)
 		WCD9335_CDC_RX0_RX_VOL_CTL);
  	soundcontrol.default_earpiece_value = snd_soc_read(codec,
  		WCD9335_CDC_RX0_RX_VOL_CTL);
-
 	if (pdata->wcd9xxx_mic_tristate)
 		tasha_set_high_impedance_mode(codec);
 
