@@ -264,6 +264,7 @@ int snd_soc_update_bits(struct snd_soc_codec *codec, unsigned int reg,
 		return 0;
 	}
 #endif
+
 	return snd_soc_component_update_bits(&codec->component, reg, mask,
 		value);
 }
